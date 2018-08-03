@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Pasteles</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>¿Cuál es tu pastel?</ion-label>
+    <ion-input [(ngModel)]="pasteles.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>¿Cuál es el precio?</ion-label>
+    <ion-input [(ngModel)]="pasteles.price"></ion-input>
+  </ion-item>
+  <button ion-button full (click)="addPasteles()">Añadir información</button>
+  
+  <ion-list *ngFor="let pas of pasteles">
+    <h2>{{pas.name}}</h2>
+    <p>{{pas.price}}</p>
+  </ion-list>
+</ion-content>
